@@ -1,0 +1,18 @@
+recipe_template = <<-ERB
+
+#=<%= "=" * recipe_title.length %>=#
+# <%= recipe_title %> #
+#=<%= "=" * recipe_title.length %>=#
+
+Ingredients
+-----------
+
+  <% recipe[:ingredients].each do |ingredient| %>
+    <%= ingredient %>
+    <% end %>
+
+  <% recipe_directions.each do |direction| %>
+    <%= 1 %><%= direction %>
+    <% end %>
+
+ERB
